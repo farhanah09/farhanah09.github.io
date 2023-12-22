@@ -1,11 +1,53 @@
-<html>
-  <head>
-    <title>Href Attribute Example</title>
-  </head>
-  <body>
-    <h1>Href Attribute Example</h1>
-    <p>
-      <a href="https://www.freecodecamp.org/contribute/">The freeCodeCamp Contribution Page</a> shows you how and where you can contribute to freeCodeCamp's community and growth.
-    </p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <img src="profile.jpg" alt="Your Profile Picture" class="profile-picture">
+                <h1>Your Name</h1>
+                <h2>Your Job Title or Specialization</h2>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Introduce yourself and your professional background here.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <a href="project1.html" class="project">
+                    <img src="project1-thumbnail.jpg" alt="Project 1 Thumbnail">
+                    <h3>Project 1 Title</h3>
+                    <p>Project 1 Description</p>
+                </a>
+                </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+</body>
 </html>
