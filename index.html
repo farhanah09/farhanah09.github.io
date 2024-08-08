@@ -97,7 +97,6 @@
             padding: 12px 25px;
             background-color: transparent;
             border: 2px solid;
-            border-image: linear-gradient(90deg, #ff007f, #7f00ff, #007fff) 1;
             color: #fff;
             font-size: 16px;
             text-transform: uppercase;
@@ -108,20 +107,20 @@
             transition: background-color 0.3s ease;
         }
 
-        .button:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
         .button:nth-child(1) {
-            border-image: linear-gradient(90deg, #ff007f, #ff007f) 1;
+            border-image: linear-gradient(90deg, #ff7e5f, #feb47b) 1;
         }
 
         .button:nth-child(2) {
-            border-image: linear-gradient(90deg, #00c6ff, #0072ff) 1;
+            border-image: linear-gradient(90deg, #6a11cb, #2575fc) 1;
         }
 
         .button:nth-child(3) {
-            border-image: linear-gradient(90deg, #ff7e5f, #feb47b) 1;
+            border-image: linear-gradient(90deg, #43cea2, #185a9d) 1;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         .fa {
@@ -131,6 +130,8 @@
         /* Theme Switcher */
         .theme-switcher {
             cursor: pointer;
+            display: flex;
+            align-items: center;
         }
 
         .theme-switcher i {
