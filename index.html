@@ -30,12 +30,28 @@
         }
 
         .about-section {
-            padding: 150px 0;
-            text-align: center;
+            padding: 100px 0;
             position: relative;
         }
 
-        .about-section h1 {
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .about-text h1 {
             font-size: 4rem;
             font-weight: bold;
             background: linear-gradient(45deg, #ff007f, #7f00ff, #007fff);
@@ -58,20 +74,13 @@
             }
         }
 
-        .about-section p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #ccc;
-        }
-
         .profile-picture {
-            width: 150px;
-            height: 150px;
+            flex-shrink: 0;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             overflow: hidden;
-            margin: 0 auto 30px;
+            margin-left: 50px;
         }
 
         .profile-picture img {
@@ -87,39 +96,23 @@
             border-radius: 50px;
             padding: 12px 25px;
             margin: 5px;
-            border: 2px solid #333;
-            color: #fff;
+            border: 2px solid transparent;
             text-transform: uppercase;
-        }
-
-        .btn-email {
-            background-color: #000;
-            border-color: #007bff;
-            color: #007bff;
-        }
-
-        .btn-linkedin {
-            background-color: #000;
-            border-color: #0077b5;
-            color: #0077b5;
-        }
-
-        .btn-upwork {
-            background-color: #000;
-            border-color: #6fda44;
-            color: #6fda44;
-        }
-
-        .btn-github {
-            background-color: #000;
-            border-color: #333;
-            color: #333;
-        }
-
-        .btn:hover {
-            color: #fff;
             background-color: transparent;
+            background-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff);
+            background-clip: padding-box;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-clip: border-box;
+            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
+            background-size: 200% 200%;
+            animation: gradient-animation 5s ease infinite;
         }
+
+        .about-buttons .btn:hover {
+            color: #fff;
+        }
+
     </style>
 </head>
 
@@ -128,7 +121,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">DR.</a>
+            <a class="navbar-brand" href="#">FA.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -155,17 +148,21 @@
     <!-- About Section -->
     <section class="about-section">
         <div class="container">
-            <div class="profile-picture">
-                <img src="images/about/farhan.png" alt="Profile Picture">
-            </div>
-            <p>Hey, I’m</p>
-            <h1>Farhan Ahmad</h1>
-            <p>I'm a software engineer based in Toronto, Canada and also a communication and journalism student. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. I have been freelancing for a year now while studying at the university and I've managed to gain a decent amount of experience and valuable knowledge from all different kinds of fields throughout my projects/work.</p>
-            <div class="about-buttons">
-                <a href="#" class="btn btn-email">Send an email</a>
-                <a href="#" class="btn btn-linkedin">LinkedIn</a>
-                <a href="#" class="btn btn-upwork">Upwork</a>
-                <a href="#" class="btn btn-github">Github</a>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hey, I’m</p>
+                    <h1>Farhan Ahmad</h1>
+                    <p>I'm a software engineer based in Toronto, Canada and also a communication and journalism student. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. I have been freelancing for a year now while studying at the university and I've managed to gain a decent amount of experience and valuable knowledge from all different kinds of fields throughout my projects/work.</p>
+                    <div class="about-buttons">
+                        <a href="#" class="btn btn-email">Send an email</a>
+                        <a href="#" class="btn btn-linkedin">LinkedIn</a>
+                        <a href="#" class="btn btn-upwork">Upwork</a>
+                        <a href="#" class="btn btn-github">Github</a>
+                    </div>
+                </div>
+                <div class="profile-picture">
+                    <img src="images/about/farhan.png" alt="Profile Picture">
+                </div>
             </div>
         </div>
     </section>
