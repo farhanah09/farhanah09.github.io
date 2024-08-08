@@ -1,107 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farhan Ahmad - About Me</title>
+    <title>Portfolio - About Me</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Background and Font Color */
         body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            cursor: url('https://cdn-icons-png.flaticon.com/512/1822/1822899.png'), auto;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
         }
 
-        /* Upper Left FA Text */
-        .brand {
-            font-size: 30px;
+        .navbar {
+            background-color: #000;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
             font-weight: bold;
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            color: #fff;
         }
 
-        /* About Section Styling */
+        .navbar-nav .nav-link {
+            color: #fff;
+            margin-left: 30px;
+        }
+
         .about-section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .about-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 60px;
+            flex-wrap: wrap;
         }
 
-        .profile-pic {
-            border-radius: 10px;
-            width: 300px;
-            height: auto;
-            margin-left: 20px;
-        }
-
-        /* Dynamic Gradient for Name */
-        .name-gradient {
-            font-size: 50px;
-            font-weight: bold;
-            background: linear-gradient(90deg, #FF5733, #C70039, #900C3F, #581845);
-            background-size: 200% 200%;
-            color: transparent;
-            background-clip: text;
-            animation: gradientAnimation 3s ease infinite;
-        }
-
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Button Styling */
-        .button-group {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .btn-custom {
-            padding: 10px 20px;
-            border: 2px solid;
-            border-image: linear-gradient(90deg, #FF5733, #C70039, #900C3F, #581845) 1;
-            background-color: transparent;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            background-color: #444;
-            cursor: pointer;
-        }
-
-        /* About Text Styling */
         .about-text {
             max-width: 600px;
-            line-height: 1.6;
         }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .about-text h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff007f, #7f00ff, #007fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradient-animation 5s ease infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .profile-picture {
+            flex-shrink: 0;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 50px;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+        }
+
+        .about-buttons {
+            margin-top: 30px;
+        }
+
+        .about-buttons .btn {
+            border-radius: 50px;
+            padding: 12px 25px;
+            margin: 5px;
+            border: 2px solid transparent;
+            background-color: #222;
+            color: #fff;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
+            background-clip: border-box;
+            background-size: 200% 200%;
+            animation: gradient-animation 5s ease infinite;
+        }
+
+        .about-buttons .btn:hover {
+            background-color: #333;
+            color: #fff;
+            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
+        }
+
     </style>
 </head>
+
 <body>
-    <div class="brand">FA</div>
-    <section class="about-section">
-        <div>
-            <p>Hey, I'm</p>
-            <h1 class="name-gradient">Farhan Ahmad</h1>
-            <p class="about-text">I'm a data scientist and product manager passionate about technology and innovation. My journey in the tech industry has equipped me with diverse skills ranging from data analytics to product development. I thrive on solving complex problems and turning ideas into reality. I’ve worked with startups and established companies alike, always focusing on delivering value and driving growth.</p>
-            <div class="button-group">
-                <a href="mailto:farrhannah0209@gmail.com" class="btn-custom">Send an email</a>
-                <a href="https://www.linkedin.com/in/farhanahmad9/" class="btn-custom" target="_blank">LinkedIn</a>
-                <a href="https://github.com/farhanah09" class="btn-custom" target="_blank">GitHub</a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FA.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-brightness-high"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div>
-            <img src="images/about/farhan.png" alt="Profile Picture" class="profile-pic">
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hey, I’m</p>
+                    <h1>Farhan Ahmad</h1>
+                    <p>I'm a software engineer based in Toronto, Canada. I also study communication and journalism. I enjoy creating things that live on the internet, whether they are websites, applications, or anything in between. I have been freelancing for a year now while pursuing my studies at university. During this time, I've gained a substantial amount of experience and valuable knowledge across various fields through my projects and work. My journey has been filled with opportunities to learn and grow, and I continue to seek out new challenges that push the boundaries of what I can achieve.</p>
+                    <div class="about-buttons">
+                        <a href="mailto:farrhannah0209@gmail.com" class="btn-custom">Send an email</a>
+                        <a href="https://www.linkedin.com/in/farhanahmad9/" class="btn-custom" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/farhanah09" class="btn-custom" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="profile-picture">
+                    <img src="images/about/farhan.png" alt="Profile Picture">
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
