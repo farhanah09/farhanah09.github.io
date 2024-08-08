@@ -42,18 +42,13 @@
         }
 
         .about-text {
-            max-width: 600px;
+            max-width: 700px;
         }
 
         .about-text p {
             font-size: 1.1rem;
             line-height: 1.8;
             color: #ccc;
-        }
-
-        .about-text p.intro {
-            font-size: 1.5rem;
-            font-weight: bold;
         }
 
         .about-text h1 {
@@ -81,9 +76,9 @@
 
         .profile-picture {
             flex-shrink: 0;
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
             overflow: hidden;
             margin-left: 50px;
         }
@@ -97,23 +92,25 @@
             margin-top: 30px;
         }
 
-        .btn-custom {
+        .about-buttons .btn-custom {
             border-radius: 50px;
             padding: 12px 25px;
             margin: 5px;
-            border: 2px solid;
-            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
+            border: 2px solid transparent;
             background-color: #222;
             color: #fff;
             text-transform: uppercase;
             transition: all 0.3s ease;
+            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
             background-clip: border-box;
             background-size: 200% 200%;
+            animation: gradient-animation 5s ease infinite;
         }
 
-        .btn-custom:hover {
+        .about-buttons .btn-custom:hover {
             background-color: #333;
             color: #fff;
+            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
         }
 
     </style>
@@ -140,9 +137,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-brightness-high"></i></a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -153,9 +147,15 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <p class="intro">Hey, I’m</p>
+                    <p style="font-size: 1.5rem;">Hey, I’m</p>
                     <h1>Farhan Ahmad</h1>
-                    <p>I'm a software engineer based in Toronto, Canada. I also study communication and journalism. I enjoy creating things that live on the internet, whether they are websites, applications, or anything in between. I have been freelancing for a year now while pursuing my studies at university. During this time, I've gained a substantial amount of experience and valuable knowledge across various fields through my projects and work. My journey has been filled with opportunities to learn and grow, and I continue to seek out new challenges that push the boundaries of what I can achieve.</p>
+                    <p>I am a Data Science Consultant with experience across various industries, including healthcare and
+                        digital transformation. With a background in engineering management and a passion for analytics,
+                        I have honed my skills in data analysis, machine learning, and product management. My experience
+                        includes working as a Product Manager at JuneBrain Inc., a Data Scientist at Allref, and a Sr.
+                        Digital Transformation Consultant at DigitalQatalyst. I have a strong foundation in engineering
+                        from Birla Institute of Technology and Science, Pilani, and a Master’s degree in Engineering
+                        Management with a focus on Data Analytics from Carnegie Mellon University.</p>
                     <div class="about-buttons">
                         <a href="mailto:farrhannah0209@gmail.com" class="btn-custom">Send an email</a>
                         <a href="https://www.linkedin.com/in/farhanahmad9/" class="btn-custom" target="_blank">LinkedIn</a>
