@@ -51,6 +51,11 @@
             color: #ccc;
         }
 
+        .about-text p.intro {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
         .about-text h1 {
             font-size: 4rem;
             font-weight: bold;
@@ -92,25 +97,23 @@
             margin-top: 30px;
         }
 
-        .about-buttons .btn {
+        .btn-custom {
             border-radius: 50px;
             padding: 12px 25px;
             margin: 5px;
-            border: 2px solid transparent;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
             background-color: #222;
             color: #fff;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
             background-clip: border-box;
             background-size: 200% 200%;
-            animation: gradient-animation 5s ease infinite;
         }
 
-        .about-buttons .btn:hover {
+        .btn-custom:hover {
             background-color: #333;
             color: #fff;
-            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
         }
 
     </style>
@@ -150,7 +153,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hey, I’m</p>
+                    <p class="intro">Hey, I’m</p>
                     <h1>Farhan Ahmad</h1>
                     <p>I'm a software engineer based in Toronto, Canada. I also study communication and journalism. I enjoy creating things that live on the internet, whether they are websites, applications, or anything in between. I have been freelancing for a year now while pursuing my studies at university. During this time, I've gained a substantial amount of experience and valuable knowledge across various fields through my projects and work. My journey has been filled with opportunities to learn and grow, and I continue to seek out new challenges that push the boundaries of what I can achieve.</p>
                     <div class="about-buttons">
