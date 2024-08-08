@@ -7,110 +7,112 @@
     <title>Portfolio - About Me</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- GT Walsheim Pro Font (substitute if not available) -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
     <style>
         body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif; /* Substitute for GT Walsheim Pro */
         }
 
         .navbar {
-            background-color: #000;
-            padding: 20px 0;
+            background-color: transparent;
+            padding: 20px 30px;
         }
 
-        .navbar-brand {
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .navbar-nav .nav-link {
-            color: #fff;
-            margin-left: 30px;
+        .navbar-toggler {
+            background-color: #fff;
         }
 
         .about-section {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .about-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .about-text {
-            max-width: 750px;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #ccc;
+            padding: 100px 50px;
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         .about-text h1 {
             font-size: 4rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #ff007f, #7f00ff, #007fff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% 200%;
-            animation: gradient-animation 5s ease infinite;
-            margin-bottom: 20px;
+            color: #c2c2f0;
         }
 
-        @keyframes gradient-animation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+        .about-text p {
+            color: #ccc;
+            font-size: 1.2rem;
         }
 
-        .profile-picture {
-            flex-shrink: 0;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-left: 50px;
-        }
-
-        .profile-picture img {
-            width: 100%;
-            height: auto;
-        }
-
-        .about-buttons {
-            margin-top: 30px;
-        }
-
-        .about-buttons .btn {
-            border-radius: 50px;
-            padding: 12px 25px;
-            margin: 5px;
-            border: 2px solid transparent;
-            background-color: #222;
-            color: #fff;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
-            background-clip: border-box;
-            background-size: 200% 200%;
-            animation: gradient-animation 5s ease infinite;
-        }
-
-        .about-buttons .btn:hover {
+        .button {
+            padding: 10px 20px;
+            margin-right: 20px;
+            border: none;
+            border-radius: 20px;
             background-color: #333;
             color: #fff;
-            border-image: linear-gradient(45deg, #ff007f, #7f00ff, #007fff) 1;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .fa-envelope, .fa-linkedin, .fa-github {
+            margin-right: 8px;
+        }
+
+        /* Toggle button */
+        .theme-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .theme-switch .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch-checkbox {
+            display: none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        .switch-checkbox:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        .switch-checkbox:checked + .slider:before {
+            transform: translateX(26px);
         }
 
     </style>
@@ -119,58 +121,38 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">FA.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-brightness-high"></i></a>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="#">Projects</a>
+                    <a class="nav-link" href="#">Resume</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <p style="font-size: 1.75rem;">Hey, I’m</p>
-                    <h1>Farhan Ahmad</h1>
-                    <p>I am a Data Science Consultant with experience across various industries, including healthcare and
-                        digital transformation. With a background in engineering management and a passion for analytics,
-                        I have honed my skills in data analysis, machine learning, and product management. My experience
-                        includes working as a Product Manager at JuneBrain Inc., a Data Scientist at Allref, and a Sr.
-                        Digital Transformation Consultant at DigitalQatalyst. I have a strong foundation in engineering
-                        from Birla Institute of Technology and Science, Pilani, and a Master’s degree in Engineering
-                        Management with a focus on Data Analytics from Carnegie Mellon University.</p>
-                    <div class="about-buttons">
-                        <a href="mailto:farrhannah0209@gmail.com" class="btn">Send an email</a>
-                        <a href="https://www.linkedin.com/in/farhanahmad9/" class="btn" target="_blank">LinkedIn</a>
-                        <a href="https://github.com/farhanah09" class="btn" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                <div class="profile-picture">
-                    <img src="images/about/farhan.png" alt="Profile Picture">
-                </div>
-            </div>
+    <div class="about-section">
+        <div class="about-text">
+            <h1>Hey, I’m Farhan Ahmad</h1>
+            <p>I am a Data Science Consultant with experience across various industries, including healthcare and digital transformation. With a background in engineering management and a passion for analytics, I have honed my skills in data analysis, machine learning, and product management. My experience includes working as a Product Manager at JuneBrain Inc., a Data Scientist at Allref, and a Sr. Digital Transformation Consultant at DigitalQatalyst. I have a strong foundation in engineering from Birla Institute of Technology and Science, Pilani, and a Master’s degree in Engineering Management with a focus on Data Analytics from Carnegie Mellon University.</p>
+            <button class="button"><i class="fa fa-envelope"></i> Send an Email</button>
+            <button class="button"><i class="fa fa-linkedin"></i> LinkedIn</button>
+            <button class="button"><i class="fa fa-github"></i> GitHub</button>
         </div>
-    </section>
+    </div>
+
+    <!-- Theme Switch -->
+    <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" class="switch-checkbox" />
+        <span class="slider round"></span>
+    </label>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
