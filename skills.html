@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farhan Ahmad - Portfolio</title>
+    <title>Farhan Ahmad - Skills</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
@@ -75,95 +75,40 @@
             color: #aaa;
         }
 
-        .about-section {
+        .skills-section {
             padding: 100px 0;
-            text-align: left;
+            text-align: center;
             flex: 1;
         }
 
-        .about-text p:first-of-type {
-            font-size: 1.2rem;
-            font-weight: 400;
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-item {
+            text-align: center;
+            width: 150px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .skill-item i {
+            font-size: 50px;
+            color: #ddd;
             margin-bottom: 10px;
         }
 
-        .about-text h1 {
-            font-size: 5rem;
-            font-weight: 700;
-            font-family: 'GT Walsheim Pro', sans-serif;
-            background: linear-gradient(90deg, #9845E8 0%, #33D2FF 20%, #DD5789 55%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 0.05em;
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            font-size: 1rem;
+        .skill-item p {
+            margin: 0;
             color: #ccc;
-            margin-bottom: 40px;
-            line-height: 1.6;
-            text-align: justify;
-            font-weight: 300;
-            transition: color 0.3s;
         }
 
-        body.light-mode .button i {
-            color: #000;
-        }
-
-        /* .buttons {
-            display: flex;
-            gap: 10px;
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            align-items: center;
-        } */
-
-        .buttons {
-            display: flex;
-            gap: 10px;
-            padding-left: 0px; /* Align with container padding */
-            margin-bottom: 0px; /* Adjust as needed for spacing from bottom */
-            align-items: center;
-        }
-
-        .button {
-            padding: 10px 10px;
-            background-color: transparent;
-            border: 1px solid;
-            color: #fff;
-            font-size: 14px;
-            border-radius: 0px;
-            display: flex;
-            align-items: center;
-            gap: 2px;
-            transition: background-color 0.3s ease;
-            text-transform: capitalize;
-            width: 160px;
-            justify-content: center;
-            text-decoration: none; /* Removes the underline */
-        }
-
-        .button:nth-child(1) {
-            border-image: linear-gradient(90deg, #6a11cb, #2575fc) 1;
-        }
-
-        .button:nth-child(2) {
-            border-image: linear-gradient(90deg, #43cea2, #185a9d) 1;
-        }
-
-        .button:nth-child(3) {
-            border-image: linear-gradient(90deg, #D24074, #6518B4) 1;
-        }
-
-        .button:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .fa {
-            color: #fff;
+        .skills-category {
+            margin-top: 50px;
         }
 
         /* Light mode styling */
@@ -175,21 +120,16 @@
         body.light-mode .navbar-brand,
         body.light-mode .navbar-nav .nav-link,
         body.light-mode .theme-switcher i {
+            color: #333;
+        }
+
+        body.light-mode .skill-item i {
             color: #000;
         }
 
-        body.light-mode .about-text p {
+        body.light-mode .skill-item p {
             color: #000;
         }
-
-        body.light-mode .button {
-            color: #000;
-        }
-
-        body.light-mode .button:hover {
-            background-color: rgba(0, 0, 0, 0.1);
-        }
-
     </style>
 </head>
 
@@ -209,16 +149,16 @@
                         <a class="nav-link" href="skills.html">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Experience</a>
+                        <a class="nav-link" href="experience.html">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <a class="nav-link" href="resume.html">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link theme-switcher" href="#"><i class="fas fa-sun"></i></a>
@@ -227,25 +167,75 @@
             </div>
         </nav>
 
-        <!-- About Section -->
-        <section class="about-section">
-            <div class="about-text">
-                <p>Hey, I’m</p>
-                <h1>Farhan Ahmad</h1>
-                <p>I am a Data Science Consultant with experience across various industries, including healthcare and digital
-                    transformation. With a background in engineering management and a passion for analytics, I have honed my
-                    skills in data analysis, machine learning, and product management. My experience includes working as a
-                    Product Manager at JuneBrain Inc., a Data Scientist at Allref, and a Sr. Digital Transformation Consultant
-                    at DigitalQatalyst. I have a strong foundation in engineering from Birla Institute of Technology and
-                    Science, Pilani, and a Master’s degree in Engineering Management with a focus on Data Analytics from
-                    Carnegie Mellon University.</p>
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h1>Skills</h1>
+
+            <div class="skills-category">
+                <h2>Languages and Databases</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <p>Python</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-r-project"></i>
+                        <p>R</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <p>C</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <p>SQL</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <p>PostgreSQL</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <p>MySQL Workbench</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-server"></i>
+                        <p>SQL Server</p>
+                    </div>
+                </div>
             </div>
-            <div class="buttons">
-                <a href="mailto:farrhannah0209@gmail.com" class="button"><i class="fa fa-envelope"></i> Send an Email</a>
-                <a href="https://www.linkedin.com/in/farhanahmad9/" class="button" target="_blank"><i
-                        class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/farhanah09" class="button" target="_blank"><i
-                        class="fab fa-github"></i> GitHub</a>
+
+            <div class="skills-category">
+                <h2>Technical</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fab fa-google"></i>
+                        <p>Google Analytics</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <p>Tableau</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-pie"></i>
+                        <p>Microsoft Power BI</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-github"></i>
+                        <p>GitHub</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-brain"></i>
+                        <p>Scikit-learn</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <p>Pandas</p>
+                    </div>
+                    <div class="fas fa-cogs">
+                        <p>NumPy</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
