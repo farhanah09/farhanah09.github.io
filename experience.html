@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhan Ahmad - Experience</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- GT Walsheim Pro Font -->
+    <link rel="stylesheet" href="GTWalsheimPro-Light/style.css">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .navbar {
+            background-color: transparent;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-weight: 300;
+            font-size: 24px;
+            color: #aaa;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: nowrap;
+        }
+
+        .navbar-nav .nav-link {
+            color: #aaa;
+            font-weight: 300;
+            font-size: 18px;
+            margin-left: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .theme-switcher {
+            cursor: pointer;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .theme-switcher i {
+            font-size: 24px;
+            color: #aaa;
+        }
+
+        .experience-section {
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 50px;
+        }
+
+        .company-list {
+            flex: 1;
+            padding-right: 50px;
+            border-right: 1px solid #cb337f;
+            margin-right: 50px;
+        }
+
+        .company-item {
+            padding: 10px 0;
+            font-size: 18px;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .company-item.active,
+        .company-item:hover {
+            color: #fff;
+        }
+
+        .company-item.active {
+            font-weight: bold;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .company-item.active::before {
+            content: '';
+            position: absolute;
+            left: -10px; /* Adjust as needed to position the line */
+            top: 0;
+            bottom: 0;
+            width: 2px; /* Thickness of the line */
+            background: #fff;
+        }
+
+        body.light-mode .company-item.active::before {
+            background: #000; /* Line changes to black in light mode */
+        }
+
+
+        .experience-details {
+            flex: 3;
+        }
+
+        .experience-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .experience-company {
+            font-size: 18px;
+            color: #33D2FF;
+            margin-bottom: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .experience-date {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .experience-description {
+            font-size: 16px;
+            color: #ccc;
+            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Light mode styling */
+        body.light-mode {
+            background-color: #fff;
+            color: #000;
+        }
+
+        body.light-mode .navbar-brand,
+        body.light-mode .navbar-nav .nav-link,
+        body.light-mode .theme-switcher i {
+            color: #000;
+        }
+
+        body.light-mode .company-list {
+            border-color: #ddd;
+        }
+
+        body.light-mode .company-item {
+            color: #666;
+        }
+
+        body.light-mode .company-item.active,
+        body.light-mode .company-item:hover {
+            color: #000;
+        }
+
+        body.light-mode .experience-company {
+            color: #007bff;
+        }
+
+        body.light-mode .experience-description {
+            color: #333;
+        }
+        .company-logo {
+            width: 50px; /* Adjust the size as needed */
+            height: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+            border-radius: 5px; /* Optional: If you want rounded corners */
+        }
+
+        .experience-title {
+            display: flex;
+            align-items: center;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">FA.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="experience.html">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link theme-switcher" href="#"><i class="fas fa-sun"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Experience Section -->
+        <section class="experience-section">
+            <div class="company-list">
+                <div class="company-item active" onclick="showExperience('selfbook')">Selfbook</div>
+                <div class="company-item" onclick="showExperience('wevoz')">Wevoz</div>
+            </div>
+            <div id="selfbook" class="experience-content">
+                <h2 class="experience-title">Software Developer (Remote)</h2>
+                <p class="experience-company">
+                    <img src="images/about/farhan.png" alt="Selfbook Logo" class="company-logo"> US - New York
+                </p>
+                <p class="experience-date">Jun 2021 - Present</p>
+                <p class="experience-description">
+                    - Developing screens and UI components for the web application using React and Tailwind.<br>
+                    - Fixing UI issues and integrating backend APIs with Redux Saga.
+                </p>
+            </div>
+            <div id="wevoz" class="experience-content" style="display: none;">
+                <h2 class="experience-title">Software Engineer</h2>
+                <p class="experience-company">
+                    <img src="images/about/farhan.png" alt="Wevoz Logo" class="company-logo"> Wevoz / US - Remote
+                </p>
+                <p class="experience-date">Jan 2020 - May 2021</p>
+                <p class="experience-description">
+                    - Designed and implemented scalable software solutions.<br>
+                    - Collaborated with cross-functional teams to define and design new features.
+                </p>
+            </div>
+            
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script to toggle experiences -->
+    <script>
+        function showExperience(id) {
+            var experiences = document.getElementsByClassName('experience-content');
+            for (var i = 0; i < experiences.length; i++) {
+                experiences[i].style.display = 'none';
+            }
+            document.getElementById(id).style.display = 'block';
+
+            var items = document.getElementsByClassName('company-item');
+            for (var i = 0; i < items.length; i++) {
+                items[i].classList.remove('active');
+            }
+            document.querySelector('.company-item[onclick="showExperience(\'' + id + '\')"]').classList.add('active');
+        }
+    </script>
+
+    <!-- Script for theme switcher -->
+    <script>
+        const themeSwitcher = document.querySelector('.theme-switcher');
+        const body = document.body;
+
+        themeSwitcher.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const icon = themeSwitcher.querySelector('i');
+            if (body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
+    </script>
+</body>
+
+</html>
