@@ -79,6 +79,13 @@
             padding: 100px 0;
             text-align: left;
             flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-text {
+            flex: 1;
         }
 
         .about-text p:first-of-type {
@@ -108,25 +115,24 @@
             transition: color 0.3s;
         }
 
-        body.light-mode .button i {
-            color: #000;
+        .about-image {
+            margin-left: 30px;
+            flex-shrink: 0;
         }
 
-        /* .buttons {
-            display: flex;
-            gap: 10px;
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            align-items: center;
-        } */
+        .about-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 10%;
+            object-fit: cover;
+        }
 
         .buttons {
             display: flex;
             gap: 10px;
-            padding-left: 0px; /* Align with container padding */
-            margin-bottom: 0px; /* Adjust as needed for spacing from bottom */
+            margin-top: 40px;
             align-items: center;
+            justify-content: flex-start;
         }
 
         .button {
@@ -143,7 +149,7 @@
             text-transform: capitalize;
             width: 160px;
             justify-content: center;
-            text-decoration: none; /* Removes the underline */
+            text-decoration: none;
         }
 
         .button:nth-child(1) {
@@ -215,10 +221,10 @@
                         <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <a class="nav-link" href="resume.html">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link theme-switcher" href="#"><i class="fas fa-sun"></i></a>
@@ -240,14 +246,18 @@
                     Science, Pilani, and a Master’s degree in Engineering Management with a focus on Data Analytics from
                     Carnegie Mellon University.</p>
             </div>
-            <div class="buttons">
-                <a href="mailto:farrhannah0209@gmail.com" class="button"><i class="fa fa-envelope"></i> Send an Email</a>
-                <a href="https://www.linkedin.com/in/farhanahmad9/" class="button" target="_blank"><i
-                        class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/farhanah09" class="button" target="_blank"><i
-                        class="fab fa-github"></i> GitHub</a>
+            <div class="about-image">
+                <img src="images/about/farhan.png" alt="Farhan Ahmad">
             </div>
         </section>
+
+        <div class="buttons">
+            <a href="mailto:farrhannah0209@gmail.com" class="button"><i class="fa fa-envelope"></i> Send an Email</a>
+            <a href="https://www.linkedin.com/in/farhanahmad9/" class="button" target="_blank"><i
+                    class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/farhanah09" class="button" target="_blank"><i
+                    class="fab fa-github"></i> GitHub</a>
+        </div>
     </div>
 
     <!-- Bootstrap JS -->
@@ -261,15 +271,13 @@
         themeSwitcher.addEventListener('click', () => {
             body.classList.toggle('light-mode');
             const icon = themeSwitcher.querySelector('i');
-            if (body.classList.contains('light-mode')) {
+            if (body.classList.contains('light-mode')) {    
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon');
             } else {
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
-            }
-        });
+            }   
+        }); 
     </script>
 </body>
-
-</html>
