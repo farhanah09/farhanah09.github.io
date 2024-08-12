@@ -61,6 +61,7 @@
             font-size: 18px;
             margin-left: 20px;
             font-family: 'Inter', sans-serif;
+            cursor: pointer;
         }
 
         .theme-switcher {
@@ -130,7 +131,8 @@
         .buttons {
             display: flex;
             gap: 10px;
-            margin-top: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
             align-items: center;
             justify-content: flex-start;
         }
@@ -172,6 +174,56 @@
             color: #fff;
         }
 
+        .skills-section {
+            padding: 100px 0;
+            text-align: center;
+            flex: 1;
+        }
+
+        .skills-category {
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .skills-category h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-bottom: 2px solid #666;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-item {
+            text-align: center;
+            width: 150px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .skill-item i {
+            font-size: 50px;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+
+        .skill-item img {
+            filter: invert(0);
+            transition: filter 0.3s ease;
+        }
+
+        .skill-item p {
+            margin: 0;
+            color: #ccc;
+        }
+
         /* Light mode styling */
         body.light-mode {
             background-color: #fff;
@@ -196,6 +248,20 @@
             background-color: rgba(0, 0, 0, 0.1);
         }
 
+        body.light-mode .skills-category h2 {
+            color: #333;
+            border-color: #ccc;
+        }
+
+        body.light-mode .skill-item i,
+        body.light-mode .skill-item img {
+            filter: invert(1);
+        }
+
+        body.light-mode .skill-item p {
+            color: #000;
+        }
+
     </style>
 </head>
 
@@ -212,7 +278,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="skills.html">Skills</a>
+                        <a class="nav-link" href="#skills-section">Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="experience.html">Experience</a>
@@ -251,6 +317,7 @@
             </div>
         </section>
 
+        <!-- Buttons -->
         <div class="buttons">
             <a href="mailto:farrhannah0209@gmail.com" class="button"><i class="fa fa-envelope"></i> Send an Email</a>
             <a href="https://www.linkedin.com/in/farhanahmad9/" class="button" target="_blank"><i
@@ -258,6 +325,98 @@
             <a href="https://github.com/farhanah09" class="button" target="_blank"><i
                     class="fab fa-github"></i> GitHub</a>
         </div>
+
+        <!-- Skills Section -->
+        <section id="skills-section" class="skills-section">
+            <h1>Skills</h1>
+
+            <div class="skills-category">
+                <h2>Languages and Databases</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fab fa-python icon"></i>
+                        <p>Python</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-r-project icon"></i>
+                        <p>R</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code icon"></i>
+                        <p>C</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database icon"></i>
+                        <p>SQL</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database icon"></i>
+                        <p>PostgreSQL</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database icon"></i>
+                        <p>MySQL Workbench</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-server icon"></i>
+                        <p>SQL Server</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h2>Technical</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fab fa-google icon"></i>
+                        <p>Google Analytics</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-bar icon"></i>
+                        <p>Tableau</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-pie icon"></i>
+                        <p>Microsoft Power BI</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-github icon"></i>
+                        <p>GitHub</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-brain icon"></i>
+                        <p>Scikit-learn</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code icon"></i>
+                        <p>Pandas</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="icons/numpy.png" alt="NumPy" class="icon" style="width:75px; height:auto;">
+                        <p>NumPy</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h2>Product Management</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fas fa-tasks icon"></i>
+                        <p>Agile Methodology</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-project-diagram icon"></i>
+                        <p>Project Planning</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-line icon"></i>
+                        <p>Market Analysis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <!-- Bootstrap JS -->
@@ -280,4 +439,7 @@
             }   
         }); 
     </script>
+
 </body>
+
+</html>
